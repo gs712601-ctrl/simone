@@ -1,0 +1,59 @@
+<%- include('header.ejs'); %>
+
+      <div class="main">
+        <header class="topbar">
+          <h2>Add record</h2>
+          <div class="user">Welcome, Admin</div>
+        </header>
+
+        <section class="content">
+          <div class="panel">
+            <h3>User form</h3>
+            <p class="hint">Static template only. Submit stays on this page.</p>
+
+            <form class="form" action="#">
+              <div class="row">
+                <div class="field">
+                  <label for="name">Full name</label>
+                  <input id="name" type="text" placeholder="Aisha Khan" />
+                </div>
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input id="email" type="email" placeholder="aisha@example.com" />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="field">
+                  <label for="role">Role</label>
+                  <select id="role">
+                    <option>Editor</option>
+                    <option>Admin</option>
+                    <option>Viewer</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="status">Status</label>
+                  <select id="status">
+                    <option>Active</option>
+                    <option>Pending</option>
+                    <option>Blocked</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="notes">Notes</label>
+                <textarea id="notes" placeholder="Short note..."></textarea>
+              </div>
+
+              <div class="actions">
+                <button class="btn" type="submit">Save</button>
+                <button class="btn btn-ghost" type="reset">Clear</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+ <%- include('footer.ejs'); %>

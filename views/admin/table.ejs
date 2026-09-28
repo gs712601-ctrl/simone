@@ -1,0 +1,59 @@
+<%- include('header.ejs'); %>
+
+      <div class="main">
+        <header class="topbar">
+          <h2>Users table</h2>
+          <div class="user">Welcome, Admin</div>
+        </header>
+
+        <section class="content">
+          <div class="panel">
+            <h3>All users</h3>
+            <p class="hint">Sample rows for layout only.</p>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#01</td>
+                  <td>Aisha Khan</td>
+                  <td>aisha@example.com</td>
+                  <td>Admin</td>
+                  <td><span class="badge badge-ok">Active</span></td>
+                </tr>
+                <tr>
+                  <td>#02</td>
+                  <td>Omar Ali</td>
+                  <td>omar@example.com</td>
+                  <td>Editor</td>
+                  <td><span class="badge badge-warn">Pending</span></td>
+                </tr>
+                <tr>
+                  <td>#03</td>
+                  <td>Sara Malik</td>
+                  <td>sara@example.com</td>
+                  <td>Viewer</td>
+                  <td><span class="badge badge-ok">Active</span></td>
+                </tr>
+                <tr>
+                  <td>#04</td>
+                  <td>Bilal Ahmed</td>
+                  <td>bilal@example.com</td>
+                  <td>Editor</td>
+                  <td><span class="badge badge-off">Blocked</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  <%- include('footer.ejs'); %>

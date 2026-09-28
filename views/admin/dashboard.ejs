@@ -1,0 +1,63 @@
+<%- include('header.ejs'); %>
+
+      <div class="main">
+        <header class="topbar">
+          <h2>Dashboard</h2>
+          <div class="user">Welcome, <%= name %></div>
+        </header>
+
+        <section class="content">
+          <div class="cards">
+            <article class="card">
+              <span>Users</span>
+              <strong>128</strong>
+            </article>
+            <article class="card">
+              <span>Orders</span>
+              <strong>54</strong>
+            </article>
+            <article class="card">
+              <span>Messages</span>
+              <strong>19</strong>
+            </article>
+            <article class="card">
+              <span>Revenue</span>
+              <strong>$4,820</strong>
+            </article>
+          </div>
+
+          <div class="panel">
+            <h3>Recent activity</h3>
+            <p class="hint">Dummy data for the template.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>New user signup</td>
+                  <td><span class="badge badge-ok">Done</span></td>
+                  <td>12 Sep 2026</td>
+                </tr>
+                <tr>
+                  <td>Order #1042</td>
+                  <td><span class="badge badge-warn">Pending</span></td>
+                  <td>12 Sep 2026</td>
+                </tr>
+                <tr>
+                  <td>Support ticket</td>
+                  <td><span class="badge badge-off">Closed</span></td>
+                  <td>11 Sep 2026</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  
+<%- include('footer.ejs'); %>

@@ -1,0 +1,52 @@
+<%- include('header.ejs'); %>
+
+      <div class="main">
+        <header class="topbar">
+          <h2>Add Home Record</h2>
+          <div class="user">Welcome, Home</div>
+        </header>
+
+        <section class="content">
+          <div class="panel">
+            <h3>Home Form</h3>
+       <form class="form" action="/admin/home_update_save/<%=home.hid %>/<%=home.h_img %>" method="post" enctype="multipart/form-data">
+              <div class="row">
+                <div class="field">
+                  <label for="name">Home Image</label>
+                  <input id="img" type="file" name="h_img" />
+                  <img src="/image/<%=home.h_img %>" height="200px" width="200px"/>
+
+                </div>
+                <div class="field">
+                  <label for="text">Home Title</label>
+                  <input id="text" type="text" name="h_title1" value="<%=home.h_title1 %>"  placeholder="title...." />
+                </div>
+
+                 <div class="field">
+                  <label for="text">Home Title</label>
+                  <input id="text" type="text" name="h_title2" value="<%=home.h_title2 %>" placeholder="title...." />
+                </div>
+
+                 <div class="field">
+                  <label for="text">Home Title</label>
+                  <input id="text" type="text" name="h_title3" value="<%=home.h_title3 %>" placeholder="title...." />
+                </div>
+              </div>
+
+
+              <div class="field">
+                <label for="notes">Home Description</label>
+                <textarea id="notes" name="h_desc" placeholder="Short note..."><%=home.h_desc%></textarea>
+              </div>
+
+              <div class="actions">
+                <button class="btn" type="submit">Update</button>
+                <button class="btn btn-ghost" type="reset">Clear</button>
+              </div>
+
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+ <%- include('footer.ejs'); %>

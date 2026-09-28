@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login</title>
+    <link rel="stylesheet" type="text/css" href="admin/css/admin.css" />
+  </head>
+  <body class="login-page">
+    <form class="login-card" action="/admin/login_check" method="post">
+      <h1>Admin Login</h1>
+      <p>Simple template. Any details will open the dashboard.</p>
+
+      <div class="form">
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="username" type="email" placeholder="admin@example.com" required />
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="••••••••" required />
+        </div>
+        <button class="btn" type="submit">Sign in</button>
+      </div>
+    </form>
+  </body>
+</html>

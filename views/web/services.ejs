@@ -1,0 +1,22 @@
+<%- include('header.ejs'); %>
+
+<section class="section section--alt" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-bg-title">Services</div>
+          <h2 class="section-title">What I Do?</h2>
+        </div>
+        <div class="services">
+          <% for(var i=0;i<service.length;i++) { %>
+          <article class="service">
+            <i class="<%service[i].s_icons %>"></i>
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+            <h3><%=service[i].s_title %></h3>
+            <p><%=service[i].s_desc %></p>
+          </article>
+          <% } %>
+        </div>
+      </div>
+    </section>
+
+    <%- include('footer.ejs'); %>

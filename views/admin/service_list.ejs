@@ -1,0 +1,44 @@
+<%- include('header.ejs'); %>
+
+      <div class="main">
+        <header class="topbar">
+          <h2>Users table</h2>
+          <div class="user">Welcome, Admin</div>
+        </header>
+
+        <section class="content">
+          <div class="panel">
+            <h3>All users</h3>
+            <p class="hint">Sample rows for layout only.</p>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Icons</th>
+                  <th>Title</th>
+                  <th>Desc</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% for(var i=0;i<service.length;i++){%>
+                <tr>
+                  <td><%= i+1 %></td>
+                  <td><%= service[i].s_icons %></td>
+                  <td><%= service[i].s_title %></td>
+                  <td><%= service[i].s_desc %></td>
+                  
+                  <td><span class="badge badge-ok">Delete</span></td>
+                  <td><span class="badge badge-ok">Edit</span></td>
+
+                </tr>
+                <% } %>
+                 
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  <%- include('footer.ejs'); %>

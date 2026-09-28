@@ -1,0 +1,38 @@
+<%- include('header.ejs'); %>
+
+<section class="section section--alt" id="portfolio">
+    <div class="container">
+
+        <div class="section-head">
+            <div class="section-bg-title">Portfolio</div>
+            <h2 class="section-title">My Work</h2>
+        </div>
+
+        <div class="filters">
+            <button class="is-on" data-filter="all">All</button>
+            <button data-filter="design">Design</button>
+            <button data-filter="brand">Brand</button>
+            <button data-filter="photos">Photos</button>
+        </div>
+
+        <div class="portfolio-grid">
+
+            <% for(var i = 0; i < work.length; i++) { %>
+
+                <figure class="work" data-cat="design">
+                    <img src="/image/<%= work[i].w_img %>" />
+
+                    <figcaption>
+                        <h5><%= work[i].w_title %></h5>
+                        <%= work[i].w_desc %>
+                    </figcaption>
+                </figure>
+
+            <% } %>
+
+        </div>
+
+    </div>
+</section>
+
+<%- include('footer.ejs'); %>

@@ -1,0 +1,86 @@
+<%- include('header.ejs'); %>
+
+<section class="hero" id="home"
+    style="background:
+    linear-gradient(rgba(8, 10, 12, 0.62), rgba(8, 10, 12, 0.72)),
+    url('/image/<%= home.h_img %>') center / cover no-repeat;">
+
+    <div class="hero__social" aria-label="Social links">
+        <a href="/" aria-label="Twitter">Tw</a>
+        <a href="/" aria-label="Facebook">Fb</a>
+        <a href="/" aria-label="Dribbble">Dr</a>
+        <a href="/" aria-label="GitHub">Gh</a>
+    </div>
+
+    <div class="hero-content">
+
+        <h1>
+            I'm <span id="typed"></span>
+        </h1>
+
+        <p class="hero-description">
+            <%= home.h_desc %>
+        </p>
+
+    </div>
+
+    <script>
+        const words = [
+            "<%= home.h_title1 %>",
+            "<%= home.h_title2 %>",
+            "<%= home.h_title3 %>"
+        ];
+
+        let wordIndex = 0;
+        let charIndex = 0;
+
+        const typed = document.getElementById("typed");
+
+        function typeWord() {
+
+            if (charIndex < words[wordIndex].length) {
+
+                typed.innerHTML += words[wordIndex].charAt(charIndex);
+
+                charIndex++;
+
+                setTimeout(typeWord, 100);
+
+            } else {
+
+                setTimeout(deleteWord, 1500);
+
+            }
+        }
+
+        function deleteWord() {
+
+            if (charIndex > 0) {
+
+                typed.innerHTML =
+                    words[wordIndex].substring(0, charIndex - 1);
+
+                charIndex--;
+
+                setTimeout(deleteWord, 50);
+
+            } else {
+
+                wordIndex++;
+
+                if (wordIndex >= words.length) {
+                    wordIndex = 0;
+                }
+
+                setTimeout(typeWord, 300);
+            }
+        }
+
+        typeWord();
+    </script>
+
+    <a class="scroll-hint" href="/about" aria-label="Scroll to about"></a>
+
+</section>
+
+<%- include('footer.ejs'); %>

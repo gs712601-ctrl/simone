@@ -1,0 +1,39 @@
+<%- include('header.ejs'); %>
+
+      <div class="main">
+        <header class="topbar">
+          <h2>Add Work Record</h2>
+          <div class="user">Welcome, Admin</div>
+        </header>
+
+        <section class="content">
+          <div class="panel">
+            <h3>Work Form</h3>
+           <form class="form" action="/admin/work_save" method="post" enctype="multipart/form-data">
+              <div class="row">
+                <div class="field">
+                  <label for="name">Work Image</label>
+                  <input id="image" type="file" name="w_img" placeholder="fa fa-icons" />
+                </div>
+                <div class="field">
+                  <label for="text">Work Title</label>
+                  <input id="text" type="text" name="w_title"  placeholder="title...." />
+                </div>
+              </div>
+
+
+              <div class="field">
+                <label for="notes">Work Description</label>
+                <textarea id="notes" name="w_desc" placeholder="Short note..."></textarea>
+              </div>
+
+              <div class="actions">
+                <button class="btn" type="submit">Save</button>
+                <button class="btn btn-ghost" type="reset">Clear</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+ <%- include('footer.ejs'); %>
